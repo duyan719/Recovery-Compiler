@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: BUILD
 
 # Controls when the workflow will run
 on:
@@ -23,11 +23,11 @@ jobs:
       - name: "Recovery Compile"
         uses: long266/Recovery-Compiler@production
         env:
-          MANIFEST: "https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git"
-          DT_LINK: "https://github.com/long266/twrp_device_samsung_g0q"
-          BRANCH: "twrp-12.1"
-          VENDOR: "samsung"  # Example: xiaomi, samsung, asus, etc.
-          CODENAME: "g0q"   # Example: nikel, phoenix, ginkgo, etc.
+          MANIFEST: "https://github.com/PitchBlackRecoveryProject/manifest_pb -b android-11.0"
+          DT_LINK: "https://github.com/duyan719/android_device_xiaomi_spes-TWRP.git"
+          BRANCH: "twrp-11"
+          VENDOR: "xiaomi"  # Example: xiaomi, samsung, asus, etc.
+          CODENAME: "spes"   # Example: nikel, phoenix, ginkgo, etc.
           KERNEL_LINK: ""   # Ignore if using prebuilt.
           TARGET: "recoveryimage"
           FLAVOR: "eng"
